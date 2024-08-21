@@ -1,38 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="refresh" content="0;url=https://docs.google.com/forms/d/e/1FAIpQLSfgk4svgJIVTF9p8WUZZaGqSPM8YXDrwtQG5vgNBeGhZoRG2Q/viewform?usp=sf_link">
     <title>Redirecting...</title>
-    <script type="text/javascript">
-        function fetchUrl() {
-            var scriptUrl = "https://script.google.com/macros/s/AKfycbyFgAsABzSjFdxFcFdL8JdxzTunnF2qLXhzO36L-4oL1eWFkwDZzS9qlPRngLnhzPsK/exec"; // Your Google Apps Script web app URL
-            
-            fetch(scriptUrl)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok.');
-                    }
-                    return response.text();
-                })
-                .then(url => {
-                    if (url) {
-                        window.location.href = url; // Redirect to the fetched URL
-                    } else {
-                        throw new Error('URL is empty.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching URL:', error);
-                    var redirectLink = document.getElementById('redirect-link');
-                    redirectLink.href = scriptUrl; // Fallback URL
-                    redirectLink.textContent = 'Redirect failed. Click here to retry.';
-                });
-        }
-        
-        // Fetch and redirect when the page loads
-        window.onload = fetchUrl;
-    </script>
 </head>
 <body>
-    <p>If you are not redirected automatically, <a id="redirect-link" href="#">click here</a>.</p>
+    <p>If you are not redirected, <a href="https://docs.google.com/forms/d/e/1FAIpQLSfgk4svgJIVTF9p8WUZZaGqSPM8YXDrwtQG5vgNBeGhZoRG2Q/viewform?usp=sf_link">click here</a>.</p>
 </body>
 </html>
