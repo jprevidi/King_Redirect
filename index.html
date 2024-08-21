@@ -10,7 +10,9 @@
                 .then(response => response.text())
                 .then(url => {
                     // Update the redirect and hyperlink with the fetched URL
-                    document.getElementById('redirect-link').href = url;
+                    var redirectLink = document.getElementById('redirect-link');
+                    redirectLink.href = url;
+                    redirectLink.textContent = 'Click here if not redirected';
                     window.location.href = url;
                 })
                 .catch(error => {
