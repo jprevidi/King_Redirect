@@ -9,14 +9,12 @@
             fetch(scriptUrl)
                 .then(response => response.text())
                 .then(url => {
-                    // Update the redirect and hyperlink with the fetched URL
-                    var redirectLink = document.getElementById('redirect-link');
-                    redirectLink.href = url;
-                    redirectLink.textContent = 'Click here if not redirected';
+                    // Redirect immediately
                     window.location.href = url;
                 })
                 .catch(error => {
                     console.error('Error fetching URL:', error);
+                    document.getElementById('redirect-link').textContent = 'Redirect failed. Click here to retry.';
                 });
         }
         
