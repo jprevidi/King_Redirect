@@ -3,26 +3,14 @@
 <head>
     <title>Redirecting...</title>
     <script type="text/javascript">
-        // Function to fetch the URL from the Google Apps Script web app
-        function fetchUrl() {
-            var scriptUrl = "https://script.google.com/macros/s/AKfycbx96Jz5HdoL-qRyECf1tAq1HuUkoBEFRMHkglxjvt7dm1e6mOqEVbz4WxsO6WCkea8_/exec"; // Your web app URL
-            fetch(scriptUrl)
-                .then(response => response.text())
-                .then(url => {
-                    // Perform the redirection
-                    window.location.href = url;
-                })
-                .catch(error => {
-                    console.error('Error fetching URL:', error);
-                    // Update the fallback link if there is an error
-                    var redirectLink = document.getElementById('redirect-link');
-                    redirectLink.href = scriptUrl; // Fallback to the same script URL
-                    redirectLink.textContent = 'Redirect failed. Click here to retry.';
-                });
+        // Directly set the URL for testing
+        function redirectToTestUrl() {
+            var testUrl = "https://www.example.com"; // Replace with a test URL
+            window.location.href = testUrl;
         }
         
-        // Fetch the URL and redirect when the page loads
-        window.onload = fetchUrl;
+        // Perform the redirection when the page loads
+        window.onload = redirectToTestUrl;
     </script>
 </head>
 <body>
